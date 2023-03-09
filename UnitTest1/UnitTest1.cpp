@@ -6,6 +6,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 extern "C" int getPerimeter(int*, int*);
 extern "C" int getArea(int*, int*);
 extern "C" int setLength(int, int*);
+extern "C" int setWidth(int, int*);
 
 namespace UnitTest1
 {
@@ -56,6 +57,15 @@ namespace UnitTest1
 
 			setLength(input, &length);
 			Assert::AreNotEqual(input, length);
+		}
+
+		TEST_METHOD(setWidthTest1)
+		{
+			int width = 8;
+			int input = 5;
+
+			setWidth(input, &width);
+			Assert::AreEqual(input, width);
 		}
 	};
 }
