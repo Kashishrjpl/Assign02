@@ -39,5 +39,14 @@ namespace UnitTest1
 			setLength(input, &length);
 			Assert::AreEqual(input, length);
 		}
+
+		TEST_METHOD(setLengthTest2)
+		{
+			int length = 9;
+			int input = 100;
+
+			setLength(input, &length);
+			Assert::AreNotEqual(input, length);
+		}
 	};
 }
