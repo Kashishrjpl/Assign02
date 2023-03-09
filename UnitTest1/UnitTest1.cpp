@@ -67,5 +67,14 @@ namespace UnitTest1
 			setWidth(input, &width);
 			Assert::AreEqual(input, width);
 		}
+
+		TEST_METHOD(setWidthTest2)
+		{
+			int width = 9;
+			int input = 100;
+
+			setWidth(input, &width);
+			Assert::AreNotEqual(input, width);
+		}
 	};
 }
