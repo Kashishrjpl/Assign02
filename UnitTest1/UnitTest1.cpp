@@ -48,5 +48,14 @@ namespace UnitTest1
 			setLength(input, &length);
 			Assert::AreNotEqual(input, length);
 		}
+
+		TEST_METHOD(setLengthTest3)
+		{
+			int length = 5;
+			int input = 0;
+
+			setLength(input, &length);
+			Assert::AreNotEqual(input, length);
+		}
 	};
 }
